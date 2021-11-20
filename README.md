@@ -5,5 +5,5 @@
 |         |         |  |
 | ------------- |:-------------:| -----:|
 |<img src="./screenshots/great-places.png" height="500"> | <img src="./screenshots/add-new-place.png" height="500"> | <img src="./screenshots/map-detail.png" height="500">|
-| <img src="./screenshots/pick-location.png" height="500">     | <img src="./screenshots/place-detail.png" height="500">        |
+| <img src="./screenshots/pick-location.png" height="500">     | <img src="./screenshots/place-details.png" height="500">        |
 
