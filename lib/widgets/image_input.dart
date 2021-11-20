@@ -67,7 +67,7 @@ class _ImageInputState extends State<ImageInput> {
         Expanded(
           child: ElevatedButton.icon(
             style: ElevatedButton.styleFrom(
-                primary: Theme.of(context).colorScheme.secondary,
+                primary: Theme.of(context).colorScheme.primary,
                 minimumSize: Size(0, 100)),
             label: Text('Take Picture'),
             icon: Icon(Icons.camera),
@@ -78,42 +78,3 @@ class _ImageInputState extends State<ImageInput> {
     );
   }
 }
-
-// File? _storedImage;
-//   final ImagePicker _picker = ImagePicker();
-// final ImagePicker _picker = ImagePicker();
-//     // Pick an image
-//     final XFile? image = await _picker.pickImage(source: ImageSource.gallery);
-//     // Capture a photo
-//     final XFile? photo = await _picker.pickImage(source: ImageSource.camera);
-//     // Pick a video
-//     final XFile? image = await _picker.pickVideo(source: ImageSource.gallery);
-//     // Capture a video
-//     final XFile? video = await _picker.pickVideo(source: ImageSource.camera);
-//     // Pick multiple images
-//     final List<XFile>? images = await _picker.pickMultiImage();
-
-// Description: A Flutter plugin for finding commonly used locations on the filesystem. Supports Android, iOS, Linux, macOS and Windows. Not all methods are supported on all platforms.
-// URL: https://pub.dev/packages/path_provider
-// Install: flutter pub add path_provider
-// App: great_places (src/mobile/flutter/learning/udemy/flutter-dart-complete-guide/great_places)
-
-// Example:
-// Directory tempDir = await getTemporaryDirectory();
-// String tempPath = tempDir.path;
-//
-// Directory appDocDir = await getApplicationDocumentsDirectory();
-// String appDocPath = appDocDir.path;
-
-// Full example
-
-// Description: A comprehensive, cross-platform path manipulation library for Dart.
-//
-// The path package provides common operations for manipulating paths: joining, splitting, normalizing, etc.
-// URL:https://pub.dev/packages/path
-// Install:dart pub add path
-// App: great_places (src/mobile/flutter/learning/udemy/flutter-dart-complete-guide/great_places)
-
-// Example:
-
-// Full example

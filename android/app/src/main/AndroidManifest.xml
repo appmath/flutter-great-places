@@ -1,8 +1,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.great_places">
+
+<!--    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />-->
+<!--    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />-->
+<!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
    <application
         android:label="great_places"
         android:icon="@mipmap/ic_launcher">
+       <meta-data
+               android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyAMmqlqj9iKJAw_FaIzINGJZyvQQ4f5qf4" />
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -27,6 +34,7 @@
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
               android:resource="@drawable/launch_background"
               />
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>

@@ -1,8 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:great_places/models/place.dart';
 import 'package:great_places/providers/great_places.dart';
 import 'package:great_places/widgets/image_input.dart';
+import 'package:great_places/widgets/location_input.dart';
 import 'package:provider/provider.dart';
 
 class AddPlaceScreen extends StatefulWidget {
@@ -15,19 +17,25 @@ class AddPlaceScreen extends StatefulWidget {
 
 class _AddPlaceScreenState extends State<AddPlaceScreen> {
   final TextEditingController _titleController = TextEditingController();
-
+  PlaceLocation? _pickedLocation;
   File? _pickedImage;
 
   void _selectImage(File pickedImage) {
     _pickedImage = pickedImage;
   }
 
+  void _selectPlace(double lat, double lng) {
+    _pickedLocation = PlaceLocation(latitude: lat, longitude: lng);
+  }
+
   void _savePlace() {
-    if (_titleController.text.isEmpty || _pickedImage == null) {
+    if (_titleController.text.isEmpty ||
+        _pickedImage == null ||
+        _pickedLocation == null) {
       return;
     }
     Provider.of<GreatPlaces>(context, listen: false)
-        .addPlace(_titleController.text, _pickedImage!);
+        .addPlace(_titleController.text, _pickedImage!, _pickedLocation!);
     Navigator.pop(context);
   }
 
@@ -72,17 +80,20 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                       height: 10,
                     ),
                     ImageInput(onSelectImage: _selectImage),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    LocationInput(onSelectPlace: _selectPlace),
                   ],
                 ),
               ),
             ),
           ),
           ElevatedButton.icon(
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.blueGrey),
-            ),
-            label: Text('Add Place'),
-            icon: Icon(Icons.add),
+            style: ElevatedButton.styleFrom(
+                primary: Theme.of(context).colorScheme.secondary),
+            label: const Text('Add Place'),
+            icon: const Icon(Icons.add),
             onPressed: _savePlace,
           ),
         ],

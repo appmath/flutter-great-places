@@ -1,0 +1,92 @@
+
+  results: [
+    {
+      address_components: [
+        {
+          long_name: 1650,
+          short_name: 1650,
+          types: [
+            street_number
+          ]
+        },
+        {
+          long_name: Charleston
+          Road,
+          short_name: Charleston
+          Rd,
+          types: [
+            route
+          ]
+        },
+        {
+          long_name: Mountain
+          View,
+          short_name: Mountain
+          View,
+          types: [
+            locality,
+            political
+          ]
+        },
+        {
+          long_name: Santa
+          Clara
+          County,
+          short_name: Santa
+          Clara
+          County,
+          types: [
+            administrative_area_level_2,
+            political
+          ]
+        },
+        {
+          long_name: California,
+          short_name: CA,
+          types: [
+            administrative_area_level_1,
+            political
+          ]
+        },
+        {
+          long_name: United
+          States,
+          short_name: US,
+          types: [
+            country,
+            political
+          ]
+        },
+        {
+          long_name: 94043,
+          short_name: 94043,
+          types: [
+            postal_code
+          ]
+        }
+      ],
+      formatted_address: 1650
+      Charleston
+      Rd,
+      Mountain
+      View,
+      CA
+      94043,
+      USA,
+      geometry: {
+        location: {
+          lat: 37.4222096,
+          lng: -122.0835439
+        },
+        location_type: ROOFTOP,
+        viewport: {
+          northeast: {
+            lat: 37.42355858029149,
+            lng: -122.0821949197085
+          },
+          southwest: {
+            lat: 37.4208606197085,
+            lng: -122.0848928802915
+          }
+        }
+      },
